@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!--<bean name="fileCloudService" class="com.dianping.customerinfo.impl.FileCloudServiceImpl">-->
+        <!--<property name="biz" value="${customerinfo-web.filecloud.biz}"/>-->
+        <!--<property name="account" value="${customerinfo-web.filecloud.account}"/>-->
+        <!--<property name="uploadUrl" value="${customerinfo-web.filecloud.upload.url}"/>-->
+        <!--<property name="uploadKey" value="${customerinfo-web.filecloud.upload.key}"/>-->
+        <!--<property name="expiredTime" value="${customerinfo-web.filecloud.upload.tokenExpiredTime}"/>-->
+        <!--<property name="downloadKey" value="${customerinfo-web.filecloud.download.key}"/>-->
+        <!--<property name="downloadUrl" value="${customerinfo-web.filecloud.download.url}"/>-->
+    <!--</bean>-->
+
+
+</beans>

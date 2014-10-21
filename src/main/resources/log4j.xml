@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//log4j/log4j Configuration//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+                     threshold="null" debug="null">
+    <appender name="CONSOLE" class="com.dianping.combiz.misc.ExtendedConsoleAppender">
+        <param name="Encoding" value="UTF-8" />
+        <param name="Target" value="System.out"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[customerinfo-biz]%d %-5p    [%c]    %m%n    "/>
+        </layout>
+    </appender>
+
+    <appender name="appAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <!-- <param name="Threshold" value="INFO" /> -->
+        <param name="Encoding" value="UTF-8" />
+        <param name="File" value="/data/applogs/customerinfo-biz/logs/app.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[customerinfo-biz]%d %-5p    [%c]    %m%n    "/>
+        </layout>
+    </appender>
+    <appender name="catAppender" class="com.dianping.cat.log4j.CatAppender" />
+
+
+    <logger name="java.sql">
+        <level value="WARN"/>
+    </logger>
+
+    <logger name="org.springframework.jms">
+        <level value="ERROR"/>
+    </logger>
+    <logger name="org.apache.activemq">
+        <level value="ERROR"/>
+    </logger>
+
+    <logger name="org.apache.struts2">
+        <level value="ERROR"/>
+    </logger>
+
+    <logger name="org.apache.struts2.dispatcher.Dispatcher"
+            additivity="false">
+        <level value="WARN"/>
+    </logger>
+
+    <root>
+        <level value="WARN"/>
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="appAppender"/>
+        <appender-ref ref="catAppender" />
+    </root>
+
+</log4j:configuration>

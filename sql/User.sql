@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `TS_User`;
+CREATE TABLE `TS_User`(
+  `UID` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '自增ID',
+  `Uname` varchar(32) NOT NULL COMMENT '用户姓名',
+  `Password` varchar(32) DEFAULT NULL COMMENT '密码',
+  PRIMARY KEY (`UID`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT '用户表';
+ALTER TABLE `TS_User`
+ADD INDEX `IX_CUSTOMER_ID` (`Uname`);
