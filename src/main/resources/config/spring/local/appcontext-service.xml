@@ -12,6 +12,6 @@
         <!--<property name="downloadKey" value="${customerinfo-web.filecloud.download.key}"/>-->
         <!--<property name="downloadUrl" value="${customerinfo-web.filecloud.download.url}"/>-->
     <!--</bean>-->
-
+    <bean id="userService" class="com.nju.teachingsystem.impl.UserServiceImpl"/>
 
 </beans>

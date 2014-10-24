@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <!--<settings cacheModelsEnabled="true" enhancementEnabled="false"-->
+              <!--lazyLoadingEnabled="false" maxRequests="3000" maxSessions="3000"-->
+              <!--maxTransactions="3000" useStatementNamespaces="true"/>-->
+    <!--<sqlMap resource="config/sqlmap/customerinfo/sqlmap-CustomerWhiteList.xml"/>-->
+    <typeAliases>
+        <typeAlias type="com.nju.teachingsystem.model.User" alias="User"/>
+    </typeAliases>
+    <mappers>
+        <mapper resource="config/sqlmap/sqlmap-User.xml"/>
+    </mappers>
+</configuration>

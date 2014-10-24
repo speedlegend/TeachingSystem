@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="User">
+    <resultMap id="result" type="User">
+        <result property="uid" column="UID"/>
+        <result property="name" column="Name"/>
+        <result property="password" column="Password"/>
+    </resultMap>
+    <select id="queryUserByUid" parameterType="int" resultMap="result">
+        select * from `User` where UID=#{uid};
+    </select>
+
+    <!--<delete id="deleteById" parameterType="int">-->
+        <!--DELETE from CONTACT WHERE CONTACT_ID = #{id};-->
+    <!--</delete>-->
+
+    <!--<insert id="insert" parameterType="Contact">-->
+        <!--INSERT INTO CONTACT (CONTACT_EMAIL, CONTACT_NAME, CONTACT_PHONE)-->
+        <!--VALUES (#{name}, #{phone}, #{email});-->
+        <!--<selectKey keyProperty="id" resultType="int" order="AFTER">-->
+            <!--select last_insert_id() as id-->
+        <!--</selectKey>-->
+    <!--</insert>-->
+
+    <!--<update id="update" parameterType="Contact">-->
+        <!--UPDATE CONTACT-->
+        <!--SET-->
+        <!--CONTACT_EMAIL = #{email},-->
+        <!--CONTACT_NAME = #{name},-->
+        <!--CONTACT_PHONE = #{phone}-->
+        <!--WHERE CONTACT_ID = #{id};-->
+    <!--</update>-->
+</mapper>
